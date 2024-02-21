@@ -25,7 +25,7 @@ pipeline{
     
         stage("Checkout from SCM"){
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/DevopsEasy/CultiGestApp.git'
+                git branch: 'master', credentialsId: 'github', url: 'https://github.com/devops-easy/spring-petclinic.git'
             }
 
         }
