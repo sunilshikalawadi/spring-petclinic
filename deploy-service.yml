@@ -17,7 +17,7 @@ spec:
       - name: springapp
         image: devopseasy/spring-petclinic-pro:latest
         ports:
-          - containerPort: 80
+          - containerPort: 8080
         imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
@@ -33,6 +33,5 @@ spec:
     targetPort: 8080
     protocol: TCP
     name: http
-    type: LoadBalancer
   selector:
     run: springapp
