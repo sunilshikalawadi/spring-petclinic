@@ -28,9 +28,7 @@
     <wro4j.version>1.8.0</wro4j.version>
 
     <jacoco.version>0.8.5</jacoco.version>
-    <sonar.projectKey>Spring-CI</sonar.projectKey>
-    <sonar.host.url>http://13.201.100.100:9000</sonar.host.url>
-    <sonar.login>sqa_931dcee9c4ecab909c4b92820c5ff89dc16a7db9</sonar.login>
+    
   </properties>
 
 
