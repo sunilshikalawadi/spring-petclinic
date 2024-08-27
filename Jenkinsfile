@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools {
-        jdk 'Java17'
+        jdk 'jdk17'
         maven 'Maven3'
     }
     environment {
@@ -44,7 +44,7 @@ pipeline{
         stage("Sonarqube Analysis") {
             steps {
                 script {
-                    withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') {
+                    withSonarQubeEnv(credentialsId: 'SonarQube-Token') {
                         sh "mvn sonar:sonar"
                     }
                 }
@@ -54,7 +54,7 @@ pipeline{
         stage("Quality Gate") {
             steps {
                 script {
-                    waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
+                    waitForQualityGate abortPipeline: false, credentialsId: 'SonarQube-Token'
                 }
             }
 
